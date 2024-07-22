@@ -1,5 +1,4 @@
 import 'package:flutter/material.dart';
-import 'package:flutter/widgets.dart';
 import 'package:islamyapplication/Hadeth/HadethScreen.dart';
 import 'package:islamyapplication/Quran/QuranScreen.dart';
 import 'package:islamyapplication/Radio/RadioScreen.dart';
@@ -14,7 +13,12 @@ class HomeScreen extends StatefulWidget {
 
 class _HomeScreenState extends State<HomeScreen> {
   int selectedIndex = 0;
-
+  List<Widget> tabs = [
+    QuranScreen(),
+    HadethScreen(),
+    SebhaScreen(),
+    RadioScreen(),
+  ];
   @override
   Widget build(BuildContext context) {
     return Stack(
@@ -42,24 +46,30 @@ class _HomeScreenState extends State<HomeScreen> {
                 BottomNavigationBarItem(
                   icon: ImageIcon(
                     AssetImage('assets/images/QuranIcon.png'),
+                    size: 30,
                   ),
                   label: 'Quran',
                 ),
                 BottomNavigationBarItem(
                   icon: ImageIcon(
                     AssetImage('assets/images/HadethIcon.png'),
+                    size: 30,
                   ),
                   label: 'Hadeth',
                 ),
                 BottomNavigationBarItem(
                   icon: ImageIcon(
                     AssetImage('assets/images/SebhaIcon.png'),
+                    size: 30,
                   ),
                   label: 'Sebha',
                 ),
                 BottomNavigationBarItem(
                   icon: ImageIcon(
-                    AssetImage('assets/images/RadioIcon.png'),
+                    AssetImage(
+                      'assets/images/RadioIcon.png',
+                    ),
+                    size: 30,
                   ),
                   label: 'Radio',
                 ),
@@ -71,11 +81,4 @@ class _HomeScreenState extends State<HomeScreen> {
       ],
     );
   }
-
-  List<Widget> tabs = [
-    HadethScreen(),
-    QuranScreen(),
-    SebhaScreen(),
-    RadioScreen(),
-  ];
 }
