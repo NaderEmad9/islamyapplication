@@ -46,8 +46,8 @@ class _SurahDetailsScreenState extends State<SurahDetailsScreen> {
                   child: Card(
                     color: CupertinoColors.white,
                     margin: EdgeInsets.symmetric(
-                      horizontal: MediaQuery.of(context).size.width * 0.020,
-                      vertical: MediaQuery.of(context).size.height * 0.02,
+                      horizontal: MediaQuery.of(context).size.width * 0.012,
+                      vertical: MediaQuery.of(context).size.height * 0.012,
                     ),
                     child: Column(
                       crossAxisAlignment: CrossAxisAlignment.start,
