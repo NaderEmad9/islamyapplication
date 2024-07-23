@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:islamyapplication/Quran/Surah_details.dart';
+import 'package:islamyapplication/Quran/surah_details.dart';
 import 'package:islamyapplication/app_colors.dart';
 
 class QuranScreen extends StatefulWidget {
