@@ -47,7 +47,7 @@ class _SurahDetailsScreenState extends State<SurahDetailsScreen> {
                     color: CupertinoColors.white,
                     margin: EdgeInsets.symmetric(
                       horizontal: MediaQuery.of(context).size.width * 0.012,
-                      vertical: MediaQuery.of(context).size.height * 0.012,
+                      vertical: MediaQuery.of(context).size.height * 0.050,
                     ),
                     child: Column(
                       crossAxisAlignment: CrossAxisAlignment.start,
@@ -71,14 +71,18 @@ class _SurahDetailsScreenState extends State<SurahDetailsScreen> {
                                   MediaQuery.of(context).size.width * 0.10,
                               color: AppColors.primaryLightColor,
                               height: 2,
-                              thickness: 2,
+                              thickness: 3,
                             ),
                           ),
                         ),
                         Expanded(
                           child: Padding(
                             padding: const EdgeInsets.all(12.0),
-                            child: ListView.builder(
+                            child: ListView.separated(
+                              separatorBuilder: (context, index) => Divider(
+                                color: AppColors.primaryLightColor,
+                                thickness: 2,
+                              ),
                               itemBuilder: (context, index) {
                                 return ItemSurahDetails(
                                   index: index,
