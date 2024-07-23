@@ -1,9 +1,9 @@
 import 'package:flutter/material.dart';
-import 'package:islamyapplication/AppColors.dart';
-import 'package:islamyapplication/Quran/SurahDetails.dart';
+import 'package:islamyapplication/Quran/Surah_details.dart';
+import 'package:islamyapplication/app_colors.dart';
 
 class QuranScreen extends StatefulWidget {
-  QuranScreen({super.key});
+  const QuranScreen({super.key});
 
   @override
   State<QuranScreen> createState() => _QuranScreenState();
@@ -135,7 +135,7 @@ class _QuranScreenState extends State<QuranScreen> {
           Expanded(
             child: Image.asset('assets/images/QuranLogo.png'),
           ),
-          Divider(
+          const Divider(
             color: AppColors.primaryLightColor,
             thickness: 3,
           ),
@@ -163,7 +163,7 @@ class _QuranScreenState extends State<QuranScreen> {
               ),
             ],
           ),
-          Divider(
+          const Divider(
             color: AppColors.primaryLightColor,
             thickness: 3,
           ),
@@ -190,7 +190,7 @@ class _QuranScreenState extends State<QuranScreen> {
                 },
                 itemCount: surahList.length,
                 separatorBuilder: (context, index) {
-                  return Divider(
+                  return const Divider(
                     color: AppColors.primaryLightColor,
                     thickness: 2,
                   );
@@ -208,7 +208,8 @@ class SurahListItem extends StatelessWidget {
   final String name;
   final int verseCount;
 
-  SurahListItem({required this.name, required this.verseCount});
+  const SurahListItem(
+      {super.key, required this.name, required this.verseCount});
 
   @override
   Widget build(BuildContext context) {

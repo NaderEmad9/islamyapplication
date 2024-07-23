@@ -1,12 +1,13 @@
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
-import 'package:flutter/services.dart';
-import 'package:islamyapplication/AppColors.dart';
-import 'package:islamyapplication/Hadeth/HadethScreen.dart';
-import 'package:islamyapplication/Hadeth/HadithItemDetails.dart';
+import 'package:islamyapplication/Hadeth/hadith_screen.dart';
+import 'package:islamyapplication/Hadeth/hadith_item_details.dart';
+import 'package:islamyapplication/app_colors.dart';
 
 class HadithDetailsScreen extends StatefulWidget {
   static const routeName = "HadithDetails";
+
+  const HadithDetailsScreen({super.key});
 
   @override
   State<HadithDetailsScreen> createState() => _HadithDetailsScreenState();
@@ -34,7 +35,7 @@ class _HadithDetailsScreenState extends State<HadithDetailsScreen> {
             ),
           ),
           body: Padding(
-            padding: EdgeInsets.all(22),
+            padding: const EdgeInsets.all(22),
             child: Card(
               elevation: 3,
               color: CupertinoColors.white,
@@ -71,7 +72,7 @@ class _HadithDetailsScreenState extends State<HadithDetailsScreen> {
                     child: Padding(
                       padding: const EdgeInsets.all(12.0),
                       child: ListView.separated(
-                        separatorBuilder: (context, index) => Divider(
+                        separatorBuilder: (context, index) => const Divider(
                           color: AppColors.primaryLightColor,
                           thickness: 2,
                         ),

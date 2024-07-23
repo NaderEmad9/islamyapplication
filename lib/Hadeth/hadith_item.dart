@@ -1,11 +1,11 @@
 import 'package:flutter/material.dart';
-import 'package:islamyapplication/Hadeth/HadethDetails.dart';
-import 'package:islamyapplication/Hadeth/HadethScreen.dart';
+import 'package:islamyapplication/Hadeth/hadith_details.dart';
+import 'package:islamyapplication/Hadeth/hadith_screen.dart';
 
 class ItemHadithName extends StatelessWidget {
   final Hadith hadith;
 
-  ItemHadithName({required this.hadith});
+  const ItemHadithName({super.key, required this.hadith});
 
   @override
   Widget build(BuildContext context) {

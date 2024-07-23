@@ -1,9 +1,12 @@
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
-import 'package:islamyapplication/AppColors.dart';
-import 'package:islamyapplication/Hadeth/HadithItem.dart';
+
+import 'package:islamyapplication/Hadeth/hadith_item.dart';
+import 'package:islamyapplication/app_colors.dart';
 
 class HadithScreen extends StatefulWidget {
+  const HadithScreen({super.key});
+
   @override
   State<HadithScreen> createState() => _HadithScreenState();
 }
@@ -23,7 +26,7 @@ class _HadithScreenState extends State<HadithScreen> {
       body: Column(
         children: [
           Expanded(child: Image.asset('assets/images/HadethLogo.png')),
-          Divider(color: AppColors.primaryLightColor, thickness: 3),
+          const Divider(color: AppColors.primaryLightColor, thickness: 3),
           Row(
             mainAxisAlignment: MainAxisAlignment.center,
             children: [
@@ -36,19 +39,19 @@ class _HadithScreenState extends State<HadithScreen> {
               ),
             ],
           ),
-          Divider(color: AppColors.primaryLightColor, thickness: 3),
+          const Divider(color: AppColors.primaryLightColor, thickness: 3),
           Expanded(
             flex: 3,
             child: Padding(
               padding: const EdgeInsets.all(8.0),
               child: hadithList.isEmpty
-                  ? Center(
+                  ? const Center(
                       child: CircularProgressIndicator(
                         color: AppColors.primaryLightColor,
                       ),
                     )
                   : ListView.separated(
-                      separatorBuilder: (context, index) => Divider(
+                      separatorBuilder: (context, index) => const Divider(
                         color: AppColors.primaryLightColor,
                         thickness: 2,
                       ),
@@ -81,7 +84,7 @@ class _HadithScreenState extends State<HadithScreen> {
     }
 
     setState(() {
-      this.hadithList = processedHadithList;
+      hadithList = processedHadithList;
     });
   }
 }

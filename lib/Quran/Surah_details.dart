@@ -1,11 +1,13 @@
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
-import 'package:islamyapplication/AppColors.dart';
-import 'package:islamyapplication/Quran/SurahItemDetails.dart';
+import 'package:islamyapplication/Quran/surah_item_details.dart';
+import 'package:islamyapplication/app_colors.dart';
 
 class SurahDetailsScreen extends StatefulWidget {
   static const routeName = "SurahDetails";
+
+  const SurahDetailsScreen({super.key});
 
   @override
   State<SurahDetailsScreen> createState() => _SurahDetailsScreenState();
@@ -36,13 +38,13 @@ class _SurahDetailsScreenState extends State<SurahDetailsScreen> {
             ),
           ),
           body: verses.isEmpty
-              ? Center(
+              ? const Center(
                   child: CircularProgressIndicator(
                     color: AppColors.primaryLightColor,
                   ),
                 )
               : Padding(
-                  padding: EdgeInsets.all(22),
+                  padding: const EdgeInsets.all(22),
                   child: Card(
                     elevation: 3,
                     color: CupertinoColors.white,
@@ -80,7 +82,8 @@ class _SurahDetailsScreenState extends State<SurahDetailsScreen> {
                           child: Padding(
                             padding: const EdgeInsets.all(12.0),
                             child: ListView.separated(
-                              separatorBuilder: (context, index) => Divider(
+                              separatorBuilder: (context, index) =>
+                                  const Divider(
                                 color: AppColors.primaryLightColor,
                                 thickness: 2,
                               ),

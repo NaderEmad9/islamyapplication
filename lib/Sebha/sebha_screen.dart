@@ -1,10 +1,12 @@
 import 'package:flutter/material.dart';
 
-class RadioScreen extends StatelessWidget {
+class SebhaScreen extends StatelessWidget {
+  const SebhaScreen({super.key});
+
   @override
   Widget build(BuildContext context) {
     return Container(
-      color: Colors.blue,
+      color: Colors.black26,
     );
   }
 }
