@@ -1,8 +1,8 @@
 import 'package:flutter/material.dart';
 
 class ItemSurahDetails extends StatelessWidget {
-  String content;
-  int index;
+  final content;
+  final index;
   ItemSurahDetails({required this.content, required this.index});
   @override
   Widget build(BuildContext context) {
