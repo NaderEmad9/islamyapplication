@@ -36,6 +36,7 @@ class _HadithDetailsScreenState extends State<HadithDetailsScreen> {
           body: Padding(
             padding: EdgeInsets.all(22),
             child: Card(
+              elevation: 3,
               color: CupertinoColors.white,
               margin: EdgeInsets.symmetric(
                 horizontal: MediaQuery.of(context).size.width * 0.012,

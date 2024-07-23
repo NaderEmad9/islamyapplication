@@ -44,6 +44,7 @@ class _SurahDetailsScreenState extends State<SurahDetailsScreen> {
               : Padding(
                   padding: EdgeInsets.all(22),
                   child: Card(
+                    elevation: 3,
                     color: CupertinoColors.white,
                     margin: EdgeInsets.symmetric(
                       horizontal: MediaQuery.of(context).size.width * 0.012,
@@ -109,7 +110,7 @@ class _SurahDetailsScreenState extends State<SurahDetailsScreen> {
     for (int i = 0; i < lines.length; i++) {
       ((lines[i]));
     }
-    verses = lines;
+    verses = lines.where((line) => line.trim().isNotEmpty).toList();
     setState(() {});
   }
 }
