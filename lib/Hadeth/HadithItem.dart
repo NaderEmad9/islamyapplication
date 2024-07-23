@@ -3,7 +3,7 @@ import 'package:islamyapplication/Hadeth/HadethDetails.dart';
 import 'package:islamyapplication/Hadeth/HadethScreen.dart';
 
 class ItemHadithName extends StatelessWidget {
-  Hadith hadith;
+  final Hadith hadith;
 
   ItemHadithName({required this.hadith});
 
