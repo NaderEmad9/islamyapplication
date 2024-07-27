@@ -1,11 +1,11 @@
 import 'package:flutter/material.dart';
-import 'package:islamyapplication/Quran/SurahDetails.dart';
+import 'package:islamyapplication/Quran/Surah_details.dart';
 
 class ItemSurahAssist extends StatefulWidget {
   final String name;
   final int index;
 
-  ItemSurahAssist({required this.name, required this.index});
+  const ItemSurahAssist({super.key, required this.name, required this.index});
 
   @override
   State<ItemSurahAssist> createState() => _ItemSurahAssistState();

@@ -1,11 +1,13 @@
 import 'package:flutter/material.dart';
-import 'package:islamyapplication/Hadeth/HadethScreen.dart';
-import 'package:islamyapplication/Quran/QuranScreen.dart';
-import 'package:islamyapplication/Radio/RadioScreen.dart';
-import 'package:islamyapplication/Sebha/SebhaScreen.dart';
+import 'package:islamyapplication/Hadeth/hadith_screen.dart';
+import 'package:islamyapplication/Quran/quran_screen.dart';
+import 'package:islamyapplication/Radio/radio_screen.dart';
+import 'package:islamyapplication/Sebha/sebha_screen.dart';
 
 class HomeScreen extends StatefulWidget {
   static const String routeName = "home";
+
+  const HomeScreen({super.key});
 
   @override
   State<HomeScreen> createState() => _HomeScreenState();
@@ -14,10 +16,10 @@ class HomeScreen extends StatefulWidget {
 class _HomeScreenState extends State<HomeScreen> {
   int selectedIndex = 0;
   List<Widget> tabs = [
-    QuranScreen(),
-    HadethScreen(),
-    SebhaScreen(),
-    RadioScreen(),
+    const QuranScreen(),
+    const HadithScreen(),
+    const SebhaScreen(),
+    const RadioScreen(),
   ];
   @override
   Widget build(BuildContext context) {
@@ -42,7 +44,7 @@ class _HomeScreenState extends State<HomeScreen> {
                   selectedIndex = index;
                 });
               },
-              items: [
+              items: const [
                 BottomNavigationBarItem(
                   icon: ImageIcon(
                     AssetImage('assets/images/QuranIcon.png'),

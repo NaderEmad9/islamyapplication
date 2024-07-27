@@ -1,10 +1,11 @@
 import 'package:flutter/material.dart';
-import 'package:islamyapplication/HomeScreen.dart';
-import 'package:islamyapplication/Quran/SurahDetails.dart';
-import 'package:islamyapplication/ThemeData.dart';
+import 'package:islamyapplication/Hadeth/hadith_details.dart';
+import 'package:islamyapplication/home_screen.dart';
+import 'package:islamyapplication/Quran/Surah_details.dart';
+import 'package:islamyapplication/theme_data.dart';
 
 void main() {
-  runApp(MyApp());
+  runApp(const MyApp());
 }
 
 class MyApp extends StatelessWidget {
@@ -16,8 +17,9 @@ class MyApp extends StatelessWidget {
       debugShowCheckedModeBanner: false,
       initialRoute: HomeScreen.routeName,
       routes: {
-        HomeScreen.routeName: (context) => HomeScreen(),
+        HomeScreen.routeName: (context) => const HomeScreen(),
         SurahDetailsScreen.routeName: (context) => SurahDetailsScreen(),
+        HadithDetailsScreen.routeName: (context) => const HadithDetailsScreen(),
       },
       theme: MyThemeData.lightMode,
       darkTheme: MyThemeData.darkMode,

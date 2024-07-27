@@ -1,7 +1,5 @@
-import 'dart:ui';
 import 'package:flutter/material.dart';
-import 'package:flutter/widgets.dart';
-import 'package:islamyapplication/AppColors.dart';
+import 'package:islamyapplication/app_colors.dart';
 
 class MyThemeData {
   static final ThemeData darkMode = ThemeData(

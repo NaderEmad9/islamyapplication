@@ -1,11 +1,13 @@
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
-import 'package:islamyapplication/AppColors.dart';
-import 'package:islamyapplication/Quran/SurahItemDetails.dart';
+import 'package:islamyapplication/Quran/surah_item_details.dart';
+import 'package:islamyapplication/app_colors.dart';
 
 class SurahDetailsScreen extends StatefulWidget {
   static const routeName = "SurahDetails";
+
+  const SurahDetailsScreen({super.key});
 
   @override
   State<SurahDetailsScreen> createState() => _SurahDetailsScreenState();
@@ -36,18 +38,19 @@ class _SurahDetailsScreenState extends State<SurahDetailsScreen> {
             ),
           ),
           body: verses.isEmpty
-              ? Center(
+              ? const Center(
                   child: CircularProgressIndicator(
                     color: AppColors.primaryLightColor,
                   ),
                 )
               : Padding(
-                  padding: EdgeInsets.all(22),
+                  padding: const EdgeInsets.all(22),
                   child: Card(
+                    elevation: 3,
                     color: CupertinoColors.white,
                     margin: EdgeInsets.symmetric(
                       horizontal: MediaQuery.of(context).size.width * 0.012,
-                      vertical: MediaQuery.of(context).size.height * 0.012,
+                      vertical: MediaQuery.of(context).size.height * 0.050,
                     ),
                     child: Column(
                       crossAxisAlignment: CrossAxisAlignment.start,
@@ -71,14 +74,19 @@ class _SurahDetailsScreenState extends State<SurahDetailsScreen> {
                                   MediaQuery.of(context).size.width * 0.10,
                               color: AppColors.primaryLightColor,
                               height: 2,
-                              thickness: 2,
+                              thickness: 3,
                             ),
                           ),
                         ),
                         Expanded(
                           child: Padding(
                             padding: const EdgeInsets.all(12.0),
-                            child: ListView.builder(
+                            child: ListView.separated(
+                              separatorBuilder: (context, index) =>
+                                  const Divider(
+                                color: AppColors.primaryLightColor,
+                                thickness: 2,
+                              ),
                               itemBuilder: (context, index) {
                                 return ItemSurahDetails(
                                   index: index,
@@ -105,7 +113,7 @@ class _SurahDetailsScreenState extends State<SurahDetailsScreen> {
     for (int i = 0; i < lines.length; i++) {
       ((lines[i]));
     }
-    verses = lines;
+    verses = lines.where((line) => line.trim().isNotEmpty).toList();
     setState(() {});
   }
 }

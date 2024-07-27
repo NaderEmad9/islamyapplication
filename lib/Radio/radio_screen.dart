@@ -1,10 +1,12 @@
 import 'package:flutter/material.dart';
 
-class HadethScreen extends StatelessWidget {
+class RadioScreen extends StatelessWidget {
+  const RadioScreen({super.key});
+
   @override
   Widget build(BuildContext context) {
     return Container(
-      color: Colors.black26,
+      color: Colors.blue,
     );
   }
 }
