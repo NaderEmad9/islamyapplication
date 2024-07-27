@@ -1,8 +1,9 @@
-import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
 import 'package:islamyapplication/Quran/surah_item_details.dart';
-import 'package:islamyapplication/app_colors.dart';
+import 'package:islamyapplication/providers/app_theme_provider.dart';
+import 'package:flutter_gen/gen_l10n/app_localizations.dart';
+import 'package:provider/provider.dart';
 
 class SurahDetailsScreen extends StatefulWidget {
   static const routeName = "SurahDetails";
@@ -18,36 +19,41 @@ class _SurahDetailsScreenState extends State<SurahDetailsScreen> {
 
   @override
   Widget build(BuildContext context) {
+    var themeProvider = Provider.of<ThemeProvider>(context);
+    final dividerColors = DividerTheme.of(context).color;
     var args = ModalRoute.of(context)?.settings.arguments as SurahDetailsargs;
     if (verses.isEmpty) {
       loadFile(args.index);
     }
     return Stack(
       children: [
-        Image.asset(
-          'assets/images/LightBackground.png',
-          width: double.infinity,
-          height: double.infinity,
-          fit: BoxFit.cover,
-        ),
+        themeProvider.isDarkTheme()
+            ? Image.asset('assets/images/DarkBackground.png',
+                width: double.infinity,
+                height: double.infinity,
+                fit: BoxFit.cover)
+            : Image.asset('assets/images/LightBackground.png',
+                width: double.infinity,
+                height: double.infinity,
+                fit: BoxFit.cover),
         Scaffold(
           appBar: AppBar(
             title: Text(
-              "Islamy",
+              AppLocalizations.of(context)!.app_title,
               style: Theme.of(context).textTheme.bodyLarge,
             ),
           ),
           body: verses.isEmpty
-              ? const Center(
+              ? Center(
                   child: CircularProgressIndicator(
-                    color: AppColors.primaryLightColor,
+                    color: dividerColors,
                   ),
                 )
               : Padding(
                   padding: const EdgeInsets.all(22),
                   child: Card(
                     elevation: 3,
-                    color: CupertinoColors.white,
+                    color: CardTheme.of(context).color,
                     margin: EdgeInsets.symmetric(
                       horizontal: MediaQuery.of(context).size.width * 0.012,
                       vertical: MediaQuery.of(context).size.height * 0.050,
@@ -72,7 +78,7 @@ class _SurahDetailsScreenState extends State<SurahDetailsScreen> {
                               indent: MediaQuery.of(context).size.width * 0.10,
                               endIndent:
                                   MediaQuery.of(context).size.width * 0.10,
-                              color: AppColors.primaryLightColor,
+                              color: dividerColors,
                               height: 2,
                               thickness: 3,
                             ),
@@ -82,15 +88,40 @@ class _SurahDetailsScreenState extends State<SurahDetailsScreen> {
                           child: Padding(
                             padding: const EdgeInsets.all(12.0),
                             child: ListView.separated(
-                              separatorBuilder: (context, index) =>
-                                  const Divider(
-                                color: AppColors.primaryLightColor,
+                              separatorBuilder: (context, index) => Divider(
+                                color: dividerColors,
                                 thickness: 2,
                               ),
                               itemBuilder: (context, index) {
-                                return ItemSurahDetails(
-                                  index: index,
-                                  content: verses[index],
+                                return Column(
+                                  crossAxisAlignment: CrossAxisAlignment.center,
+                                  textDirection: TextDirection.rtl,
+                                  children: [
+                                    if (index == 0 && args.index != 0) ...[
+                                      Text(
+                                        textAlign: TextAlign.center,
+                                        "﷽",
+                                        style: Theme.of(context)
+                                            .textTheme
+                                            .displaySmall,
+                                      ),
+                                      const SizedBox(
+                                        height: 5,
+                                      ),
+                                      Divider(
+                                        color: dividerColors,
+                                        thickness: 2,
+                                      ),
+                                    ],
+                                    const SizedBox(
+                                      height: 7,
+                                    ),
+                                    ItemSurahDetails(
+                                      index: index,
+                                      content: verses[index],
+                                      verseNumber: index + 1,
+                                    ),
+                                  ],
                                 );
                               },
                               itemCount: verses.length,
@@ -110,10 +141,18 @@ class _SurahDetailsScreenState extends State<SurahDetailsScreen> {
     String content =
         await rootBundle.loadString('assets/files/${index + 1}.txt');
     List<String> lines = content.split('\n');
-    for (int i = 0; i < lines.length; i++) {
-      ((lines[i]));
+
+    if (index == 0 && lines.isNotEmpty) {
+      lines.insert(
+        0,
+        "﷽",
+      );
     }
-    verses = lines.where((line) => line.trim().isNotEmpty).toList();
+
+    verses = lines
+        .where((line) => line.trim().isNotEmpty)
+        .map((line) => line.trim())
+        .toList();
     setState(() {});
   }
 }

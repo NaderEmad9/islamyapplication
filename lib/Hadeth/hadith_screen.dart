@@ -1,8 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
-
 import 'package:islamyapplication/Hadeth/hadith_item.dart';
-import 'package:islamyapplication/app_colors.dart';
 
 class HadithScreen extends StatefulWidget {
   const HadithScreen({super.key});
@@ -22,11 +20,12 @@ class _HadithScreenState extends State<HadithScreen> {
 
   @override
   Widget build(BuildContext context) {
+    final dividerColors = DividerTheme.of(context).color;
     return Scaffold(
       body: Column(
         children: [
           Expanded(child: Image.asset('assets/images/HadethLogo.png')),
-          const Divider(color: AppColors.primaryLightColor, thickness: 3),
+          Divider(color: dividerColors, thickness: 3),
           Row(
             mainAxisAlignment: MainAxisAlignment.center,
             children: [
@@ -39,20 +38,20 @@ class _HadithScreenState extends State<HadithScreen> {
               ),
             ],
           ),
-          const Divider(color: AppColors.primaryLightColor, thickness: 3),
+          Divider(color: dividerColors, thickness: 3),
           Expanded(
             flex: 3,
             child: Padding(
               padding: const EdgeInsets.all(8.0),
               child: hadithList.isEmpty
-                  ? const Center(
+                  ? Center(
                       child: CircularProgressIndicator(
-                        color: AppColors.primaryLightColor,
+                        color: dividerColors,
                       ),
                     )
                   : ListView.separated(
-                      separatorBuilder: (context, index) => const Divider(
-                        color: AppColors.primaryLightColor,
+                      separatorBuilder: (context, index) => Divider(
+                        color: dividerColors,
                         thickness: 2,
                       ),
                       itemCount: hadithList.length,
