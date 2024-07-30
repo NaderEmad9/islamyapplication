@@ -1,4 +1,5 @@
 import 'package:flutter_gen/gen_l10n/app_localizations.dart';
+import 'package:flutter_svg/flutter_svg.dart';
 import 'package:shared_preferences/shared_preferences.dart';
 import 'package:flutter/material.dart';
 
@@ -12,6 +13,7 @@ class SebhaScreen extends StatefulWidget {
 class SebhaScreenState extends State<SebhaScreen> {
   int counter = 0;
   int loopCounter = 0;
+  final ValueNotifier<double> _rotationAngle = ValueNotifier<double>(0);
 
   @override
   void initState() {
@@ -35,6 +37,7 @@ class SebhaScreenState extends State<SebhaScreen> {
     setState(() {
       if (counter < 99) {
         counter++;
+        _rotationAngle.value = (_rotationAngle.value + 16) % 360;
       } else {
         counter = 0;
         loopCounter++;
@@ -73,12 +76,36 @@ class SebhaScreenState extends State<SebhaScreen> {
               SizedBox(
                 height: MediaQuery.of(context).size.height * 0.02,
               ),
-              Image.asset(
-                'assets/images/sebha.png',
-                color: Theme.of(context).dividerTheme.color,
+              Stack(
+                alignment: Alignment.center,
+                children: [
+                  Transform.translate(
+                    offset: Offset(MediaQuery.of(context).size.height * -0.02,
+                        -MediaQuery.of(context).size.width * 0.5 * -0.6),
+                    child: SvgPicture.asset(
+                      'assets/images/Sebhasv.svg',
+                      width: MediaQuery.of(context).size.width * 0.35,
+                      fit: BoxFit.cover,
+                    ),
+                  ),
+                  ValueListenableBuilder<double>(
+                    valueListenable: _rotationAngle,
+                    builder: (context, angle, child) {
+                      return Transform(
+                        transform: Matrix4.rotationZ(angle * 3.14159 / 180),
+                        alignment: Alignment.center,
+                        child: SvgPicture.asset(
+                          'assets/images/Sebha3.svg',
+                          width: MediaQuery.of(context).size.width * 0.5,
+                          fit: BoxFit.cover,
+                        ),
+                      );
+                    },
+                  ),
+                ],
               ),
               SizedBox(
-                height: MediaQuery.of(context).size.height * 0.02,
+                height: MediaQuery.of(context).size.height * 0.10,
               ),
               Text(
                 AppLocalizations.of(context)!.tasbeh,
