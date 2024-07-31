@@ -1,0 +1,20 @@
+{
+    "@@locale": "en",
+    "app_title": "Islamy",
+    "qurradio": "Quran Radio",
+    "quran": "Quran",
+    "hadith": "Hadith",
+    "sebha": "Sebha",
+    "radio": "Radio",
+    "surah_title": "Surah",
+    "ayat": "Ayat",
+    "settings": "Settings",
+    "language": "Language",
+    "arabic": "Arabic",
+    "english": "English",
+    "theme": "Theme",
+    "light": "Light",
+    "dark": "Dark",
+    "loops": "Loops",
+    "tasbeh": "Praises"
+}

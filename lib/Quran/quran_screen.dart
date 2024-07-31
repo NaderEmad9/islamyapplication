@@ -1,6 +1,10 @@
 import 'package:flutter/material.dart';
 import 'package:islamyapplication/Quran/surah_details.dart';
+<<<<<<< HEAD
 import 'package:islamyapplication/app_colors.dart';
+=======
+import 'package:flutter_gen/gen_l10n/app_localizations.dart';
+>>>>>>> Development
 
 class QuranScreen extends StatefulWidget {
   const QuranScreen({super.key});
@@ -129,14 +133,20 @@ class _QuranScreenState extends State<QuranScreen> {
 
   @override
   Widget build(BuildContext context) {
+    final dividerColors = DividerTheme.of(context).color;
     return Scaffold(
       body: Column(
         children: [
           Expanded(
             child: Image.asset('assets/images/QuranLogo.png'),
           ),
+<<<<<<< HEAD
           const Divider(
             color: AppColors.primaryLightColor,
+=======
+          Divider(
+            color: dividerColors,
+>>>>>>> Development
             thickness: 3,
           ),
           Row(
@@ -145,26 +155,31 @@ class _QuranScreenState extends State<QuranScreen> {
               Expanded(
                 child: Text(
                   textAlign: TextAlign.center,
-                  "Surah",
+                  AppLocalizations.of(context)!.surah_title,
                   style: Theme.of(context).textTheme.bodyMedium,
                 ),
               ),
               Container(
                 width: 3,
-                color: AppColors.primaryLightColor,
+                color: dividerColors,
                 height: 40,
               ),
               Expanded(
                 child: Text(
                   textAlign: TextAlign.center,
-                  "Ayat",
+                  AppLocalizations.of(context)!.ayat,
                   style: Theme.of(context).textTheme.bodyMedium,
                 ),
               ),
             ],
           ),
+<<<<<<< HEAD
           const Divider(
             color: AppColors.primaryLightColor,
+=======
+          Divider(
+            color: dividerColors,
+>>>>>>> Development
             thickness: 3,
           ),
           Expanded(
@@ -190,8 +205,13 @@ class _QuranScreenState extends State<QuranScreen> {
                 },
                 itemCount: surahList.length,
                 separatorBuilder: (context, index) {
+<<<<<<< HEAD
                   return const Divider(
                     color: AppColors.primaryLightColor,
+=======
+                  return Divider(
+                    color: dividerColors,
+>>>>>>> Development
                     thickness: 2,
                   );
                 },
@@ -213,6 +233,7 @@ class SurahListItem extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
+    final dividerColors = DividerTheme.of(context).color;
     return Row(
       mainAxisAlignment: MainAxisAlignment.spaceEvenly,
       children: [
@@ -225,7 +246,7 @@ class SurahListItem extends StatelessWidget {
         ),
         Container(
           width: 2,
-          color: AppColors.primaryLightColor,
+          color: dividerColors,
           height: 40,
         ),
         Expanded(
