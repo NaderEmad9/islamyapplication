@@ -1,5 +1,13 @@
 import 'package:flutter/material.dart';
 import 'package:islamyapplication/Hadeth/hadith_details.dart';
+<<<<<<< HEAD
+import 'package:islamyapplication/home_screen.dart';
+import 'package:islamyapplication/Quran/surah_details.dart';
+import 'package:islamyapplication/theme_data.dart';
+
+void main() {
+  runApp(const MyApp());
+=======
 import 'package:islamyapplication/Home/home_screen.dart';
 import 'package:islamyapplication/Quran/surah_details.dart';
 import 'package:islamyapplication/providers/app_lang_provider.dart';
@@ -20,6 +28,7 @@ void main() {
       ),
     ),
   );
+>>>>>>> Development
 }
 
 class MyApp extends StatelessWidget {
