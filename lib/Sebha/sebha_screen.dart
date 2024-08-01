@@ -37,7 +37,7 @@ class SebhaScreenState extends State<SebhaScreen> {
     setState(() {
       if (counter < 99) {
         counter++;
-        _rotationAngle.value = (_rotationAngle.value + 16) % 360;
+        _rotationAngle.value = (_rotationAngle.value + 16.36) % 360;
       } else {
         counter = 0;
         loopCounter++;
@@ -74,7 +74,7 @@ class SebhaScreenState extends State<SebhaScreen> {
             mainAxisAlignment: MainAxisAlignment.start,
             children: <Widget>[
               SizedBox(
-                height: MediaQuery.of(context).size.height * 0.02,
+                height: MediaQuery.of(context).size.height * 0.05,
               ),
               Stack(
                 alignment: Alignment.center,
