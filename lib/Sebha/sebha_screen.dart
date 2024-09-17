@@ -66,13 +66,13 @@ class SebhaScreenState extends State<SebhaScreen> {
 
   String get displayText {
     if (counter == 99) {
-      return "لا إله إلا الله";
+      return AppLocalizations.of(context)!.laillahaillallah;
     } else if (counter % 99 < 33) {
-      return "سبحان الله";
+      return AppLocalizations.of(context)!.subhanallah;
     } else if (counter % 99 < 66) {
-      return "الحمدلله";
+      return AppLocalizations.of(context)!.alhamd;
     } else {
-      return "استغفر الله";
+      return AppLocalizations.of(context)!.astaghfirullah;
     }
   }
 

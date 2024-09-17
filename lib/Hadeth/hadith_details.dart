@@ -23,8 +23,6 @@ class HadithDetailsScreen extends StatefulWidget {
 }
 
 class _HadithDetailsScreenState extends State<HadithDetailsScreen> {
-  List<String> verses = [];
-
   @override
   Widget build(BuildContext context) {
 <<<<<<< HEAD
@@ -44,6 +42,8 @@ class _HadithDetailsScreenState extends State<HadithDetailsScreen> {
 =======
     var themeProvider = Provider.of<ThemeProvider>(context);
     var args = ModalRoute.of(context)?.settings.arguments as Hadith;
+    final locale = Localizations.localeOf(context).languageCode;
+
     return Stack(
       children: [
         themeProvider.isDarkTheme()
@@ -83,7 +83,9 @@ class _HadithDetailsScreenState extends State<HadithDetailsScreen> {
                     padding: const EdgeInsets.all(12.0),
                     child: Center(
                       child: Text(
-                        args.title,
+                        locale == 'en'
+                            ? args.translatedTitle ?? args.title
+                            : args.title,
                         style: Theme.of(context).textTheme.bodySmall,
                         textAlign: TextAlign.center,
                       ),
@@ -120,10 +122,14 @@ class _HadithDetailsScreenState extends State<HadithDetailsScreen> {
                         ),
                         itemBuilder: (context, index) {
                           return ItemHadithDetails(
-                            content: args.content[index],
+                            content: locale == 'en'
+                                ? args.translatedContent[index]
+                                : args.content[index],
                           );
                         },
-                        itemCount: args.content.length,
+                        itemCount: locale == 'en'
+                            ? args.translatedContent.length
+                            : args.content.length,
                       ),
                     ),
                   ),
