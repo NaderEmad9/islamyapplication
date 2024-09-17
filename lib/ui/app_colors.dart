@@ -8,10 +8,7 @@ class AppColors {
   static const Color primaryDarkColor = Color(0xff141A2E);
   static const Color whiteDarkColor = Color(0xffF8F8F8);
   static const Color selectedDarkColor = Color(0xffFACC1D);
-<<<<<<<< HEAD:lib/app_colors.dart
-========
   static const Color darkCardColor = Color(0xff141A2E);
   static const Color darkButtonColor = Color(0xff2A2F47);
   static const Color lightCardColor = CupertinoColors.white;
->>>>>>>> Development:lib/ui/app_colors.dart
 }

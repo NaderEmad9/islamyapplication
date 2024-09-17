@@ -1,14 +1,3 @@
-<<<<<<< HEAD
-import 'package:flutter/material.dart';
-
-class SebhaScreen extends StatelessWidget {
-  const SebhaScreen({super.key});
-
-  @override
-  Widget build(BuildContext context) {
-    return Container(
-      color: Colors.black26,
-=======
 import 'package:flutter_gen/gen_l10n/app_localizations.dart';
 import 'package:flutter_svg/flutter_svg.dart';
 import 'package:shared_preferences/shared_preferences.dart';
@@ -186,7 +175,6 @@ class SebhaScreenState extends State<SebhaScreen> {
           ),
         ),
       ),
->>>>>>> Development
     );
   }
 }

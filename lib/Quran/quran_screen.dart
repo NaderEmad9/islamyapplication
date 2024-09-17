@@ -1,10 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:islamyapplication/Quran/surah_details.dart';
-<<<<<<< HEAD
-import 'package:islamyapplication/app_colors.dart';
-=======
 import 'package:flutter_gen/gen_l10n/app_localizations.dart';
->>>>>>> Development
 
 class QuranScreen extends StatefulWidget {
   const QuranScreen({super.key});
@@ -149,13 +145,8 @@ class _QuranScreenState extends State<QuranScreen> {
           Expanded(
             child: Image.asset('assets/images/QuranLogo.png'),
           ),
-<<<<<<< HEAD
-          const Divider(
-            color: AppColors.primaryLightColor,
-=======
           Divider(
             color: dividerColors,
->>>>>>> Development
             thickness: 3,
           ),
           Row(
@@ -182,13 +173,8 @@ class _QuranScreenState extends State<QuranScreen> {
               ),
             ],
           ),
-<<<<<<< HEAD
-          const Divider(
-            color: AppColors.primaryLightColor,
-=======
           Divider(
             color: dividerColors,
->>>>>>> Development
             thickness: 3,
           ),
           Expanded(
@@ -218,13 +204,8 @@ class _QuranScreenState extends State<QuranScreen> {
                 },
                 itemCount: surahList.length,
                 separatorBuilder: (context, index) {
-<<<<<<< HEAD
-                  return const Divider(
-                    color: AppColors.primaryLightColor,
-=======
                   return Divider(
                     color: dividerColors,
->>>>>>> Development
                     thickness: 2,
                   );
                 },

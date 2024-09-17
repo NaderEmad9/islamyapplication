@@ -1,14 +1,3 @@
-<<<<<<< HEAD
-import 'package:flutter/material.dart';
-
-class RadioScreen extends StatelessWidget {
-  const RadioScreen({super.key});
-
-  @override
-  Widget build(BuildContext context) {
-    return Container(
-      color: Colors.blue,
-=======
 import 'package:fluentui_system_icons/fluentui_system_icons.dart';
 import 'package:flutter_gen/gen_l10n/app_localizations.dart';
 import 'package:flutter/material.dart';
@@ -91,7 +80,6 @@ class RadioScreenState extends State<RadioScreen> {
           ),
         ),
       ),
->>>>>>> Development
     );
   }
 }
