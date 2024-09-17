@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
 import 'package:islamyapplication/Hadeth/hadith_item.dart';
+import 'package:flutter_gen/gen_l10n/app_localizations.dart';
 
 class HadithScreen extends StatefulWidget {
   const HadithScreen({super.key});
@@ -32,7 +33,7 @@ class _HadithScreenState extends State<HadithScreen> {
               Expanded(
                 child: Text(
                   textAlign: TextAlign.center,
-                  "Hadith",
+                  AppLocalizations.of(context)!.hadith,
                   style: Theme.of(context).textTheme.bodyMedium,
                 ),
               ),

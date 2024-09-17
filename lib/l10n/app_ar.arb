@@ -16,6 +16,11 @@
     "light": "مضيء",
     "dark": "ليلي",
     "loops": "عدد الحلقات",
-    "tasbeh": "التسبيحات"
+    "tasbeh": "التسبيحات",
+    "alhamd": "الحمد لله",
+    "subhanallah": "سبحان الله",
+    "astaghfirullah": "استغفر الله",
+    "laillahaillallah": "لا إله إلا الله"
+
 
 }
