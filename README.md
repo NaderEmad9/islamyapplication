@@ -66,7 +66,7 @@ The **Islamy Application** is a Flutter-based app that provides detailed informa
 <p align="center">
   <img src="https://github.com/NaderEmad9/islamyapplication/raw/main/assets/screenshots/radio.png" alt="Light" width="220" style="margin: 10px;"/>
   <img src="https://github.com/NaderEmad9/islamyapplication/raw/main/assets/screenshots/hadithin.png" alt="Light" width="220" style="margin: 10px;"/>
-  <img src="https://github.com/NaderEmad9/islamyapplication/raw/main/assets/screenshots/quranin.png" alt="Light" width="220" style="margin: 10px;"/>
+  <img src="https://github.com/NaderEmad9/islamyapplication/raw/main/assets/screenshots/queanin.png" alt="Light" width="220" style="margin: 10px;"/>
 </p>
 <p align="center">
   <img src="https://github.com/NaderEmad9/islamyapplication/raw/main/assets/screenshots/set.png" alt="Light" width="220" style="margin: 10px;"/>
