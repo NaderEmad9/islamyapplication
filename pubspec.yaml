@@ -48,6 +48,7 @@ dependencies:
   iconify_flutter_plus: ^1.0.3
   flutter_svg: ^2.0.10+1
   translator: ^1.0.0
+  flutter_cache_manager: ^3.4.1
 
 dev_dependencies:
   flutter_test:
