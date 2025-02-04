@@ -59,32 +59,37 @@ The **Islamy Application** is a Flutter-based app that provides detailed informa
 ### Light Mode / Arabic Language
 
 <p align="center">
-  <img src="https://github.com/NaderEmad9/islamyapplication/raw/main/assets/screenshots/quran.png" alt="Light" width="220" style="margin: 10px;"/>
-  <img src="https://github.com/NaderEmad9/islamyapplication/raw/main/assets/screenshots/hadith.png" alt="Light" width="220" style="margin: 10px;"/>
-  <img src="https://github.com/NaderEmad9/islamyapplication/raw/main/assets/screenshots/sebha.png" alt="Light" width="220" style="margin: 10px;"/>
+  <img src="https://github.com/NaderEmad9/islamyapplication/raw/main/assets/screenshots/splashd.png" alt="Dark" width="220" style="margin: 10px;"/>
+  <img src="https://github.com/NaderEmad9/islamyapplication/raw/main/assets/screenshots/quran.png" alt="Dark" width="220" style="margin: 10px;"/>
+  <img src="https://github.com/NaderEmad9/islamyapplication/raw/main/assets/screenshots/hadith.png" alt="Dark" width="220" style="margin: 10px;"/>
+
 </p>
 <p align="center">
-  <img src="https://github.com/NaderEmad9/islamyapplication/raw/main/assets/screenshots/radio.png" alt="Light" width="220" style="margin: 10px;"/>
-  <img src="https://github.com/NaderEmad9/islamyapplication/raw/main/assets/screenshots/hadithin.png" alt="Light" width="220" style="margin: 10px;"/>
-  <img src="https://github.com/NaderEmad9/islamyapplication/raw/main/assets/screenshots/queanin.png" alt="Light" width="220" style="margin: 10px;"/>
+  <img src="https://github.com/NaderEmad9/islamyapplication/raw/main/assets/screenshots/sebha.png" alt="Dark" width="220" style="margin: 10px;"/>
+  <img src="https://github.com/NaderEmad9/islamyapplication/raw/main/assets/screenshots/radio.png" alt="Dark" width="220" style="margin: 10px;"/>
+  <img src="https://github.com/NaderEmad9/islamyapplication/raw/main/assets/screenshots/hadithin.png" alt="Dark" width="220" style="margin: 10px;"/>
+
 </p>
 <p align="center">
-  <img src="https://github.com/NaderEmad9/islamyapplication/raw/main/assets/screenshots/set.png" alt="Light" width="220" style="margin: 10px;"/>
+  <img src="https://github.com/NaderEmad9/islamyapplication/raw/main/assets/screenshots/queanin.png" alt="Dark" width="220" style="margin: 10px;"/>
+  <img src="https://github.com/NaderEmad9/islamyapplication/raw/main/assets/screenshots/set.png" alt="Dark" width="220" style="margin: 10px;"/>
 </p>
 
 ### Dark Mode / English Language
 
 <p align="center">
+  <img src="https://github.com/NaderEmad9/islamyapplication/raw/main/assets/screenshots/splashl.png" alt="Light" width="220" style="margin: 10px;"/>
   <img src="https://github.com/NaderEmad9/islamyapplication/raw/main/assets/screenshots/qurand.png" alt="Light" width="220" style="margin: 10px;"/>
   <img src="https://github.com/NaderEmad9/islamyapplication/raw/main/assets/screenshots/hadithd.png" alt="Light" width="220" style="margin: 10px;"/>
-  <img src="https://github.com/NaderEmad9/islamyapplication/raw/main/assets/screenshots/sebhad.png" alt="Light" width="220" style="margin: 10px;"/>
 </p>
 <p align="center">
+  <img src="https://github.com/NaderEmad9/islamyapplication/raw/main/assets/screenshots/sebhad.png" alt="Light" width="220" style="margin: 10px;"/>
   <img src="https://github.com/NaderEmad9/islamyapplication/raw/main/assets/screenshots/radiod.png" alt="Light" width="220" style="margin: 10px;"/>
   <img src="https://github.com/NaderEmad9/islamyapplication/raw/main/assets/screenshots/hadithind.png" alt="Light" width="220" style="margin: 10px;"/>
-  <img src="https://github.com/NaderEmad9/islamyapplication/raw/main/assets/screenshots/quranind.png" alt="Light" width="220" style="margin: 10px;"/>
+  
 </p>
 <p align="center">
+  <img src="https://github.com/NaderEmad9/islamyapplication/raw/main/assets/screenshots/quranind.png" alt="Light" width="220" style="margin: 10px;"/>
   <img src="https://github.com/NaderEmad9/islamyapplication/raw/main/assets/screenshots/setd.png" alt="Light" width="220" style="margin: 10px;"/>
 </p>
 
